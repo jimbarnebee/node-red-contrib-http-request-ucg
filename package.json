@@ -4,7 +4,7 @@
     "description": "A Node-RED node for performing http(s) requests that use Request library with optimized proxy support.",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/spawnrider/node-red-contrib-http-request-ucg.git"
+        "url": "git+https://github.com/jimbarnebee/node-red-contrib-http-request-ucg.git"
     },
     "keywords": [
         "node-red",
