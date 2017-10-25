@@ -1,0 +1,78 @@
+[{
+    "id": "1db65987.398a56",
+    "type": "http in",
+    "z": "b8f50bdc.e172e8",
+    "name": "",
+    "url": "/test",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 141,
+    "y": 89,
+    "wires": [
+        ["80c094b2.9e9388", "75be5441.6051fc"]
+    ]
+}, { "id": "80c094b2.9e9388", "type": "debug", "z": "b8f50bdc.e172e8", "name": "", "active": true, "console": "false", "complete": "true", "x": 386, "y": 36, "wires": [] }, {
+    "id": "c2ecc1c6.f6",
+    "type": "inject",
+    "z": "b8f50bdc.e172e8",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 116,
+    "y": 187,
+    "wires": [
+        ["f28fe22f.efac6"]
+    ]
+}, { "id": "7af410de.cafeb", "type": "http response", "z": "b8f50bdc.e172e8", "name": "", "statusCode": "", "headers": {}, "x": 470, "y": 123, "wires": [] }, { "id": "cfac6e66.a3d4e8", "type": "debug", "z": "b8f50bdc.e172e8", "name": "", "active": true, "console": "false", "complete": "false", "x": 577, "y": 190, "wires": [] }, {
+    "id": "75be5441.6051fc",
+    "type": "delay",
+    "z": "b8f50bdc.e172e8",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "5",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 297,
+    "y": 142,
+    "wires": [
+        ["7af410de.cafeb"]
+    ]
+}, {
+    "id": "1b926096.4647f7",
+    "type": "catch",
+    "z": "b8f50bdc.e172e8",
+    "name": "",
+    "scope": null,
+    "x": 251,
+    "y": 386,
+    "wires": [
+        ["7ff5135d.7e3d04"]
+    ]
+}, { "id": "7ff5135d.7e3d04", "type": "debug", "z": "b8f50bdc.e172e8", "name": "Catch", "active": true, "console": "false", "complete": "true", "x": 525, "y": 324, "wires": [] }, {
+    "id": "f28fe22f.efac6",
+    "type": "www-request-ucg",
+    "z": "b8f50bdc.e172e8",
+    "name": "",
+    "method": "POST",
+    "ret": "txt",
+    "url": "127.0.0.1:1880/test",
+    "follow-redirects": true,
+    "tls": "",
+    "httpRequestTimeout": "3",
+    "x": 284,
+    "y": 214,
+    "wires": [
+        ["cfac6e66.a3d4e8"]
+    ]
+}]
