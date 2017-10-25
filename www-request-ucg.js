@@ -16,12 +16,15 @@ module.exports = function(RED) {
         }
         this.ret = n.ret || "txt";
         //node.error("trying to set the timeout value" + n.httpRequestTimeout);
+        //gui timeout check against default
         if (n.httpRequestTimeout) { //node-input-url
             this.reqTimeout = parseInt(n.httpRequestTimeout) || 120000; //JB
         } else {
             this.reqTimeout = 120000;
         }
-        //node.error("the timeout value is now" + this.reqTimeout);
+        // node.error("the timeout value is now" + this.reqTimeout);
+
+
         this.on("input", function(msg) {
             var preRequestTimestamp = process.hrtime();
             node.status({
@@ -29,7 +32,12 @@ module.exports = function(RED) {
                 shape: "dot",
                 text: "httpin.status.requesting"
             });
+            //current timeout check against incoming message timeout
+            if ((msg.httpRequestTimeout != n.httpRequestTimeout) && (msg.httpRequestTimeout != undefined)) {
+                this.reqTimeout = msg.httpRequestTimeout;
+            }
 
+            //node.error("the timeout value is now after msg" + this.reqTimeout);
             var url = nodeUrl || msg.url;
             if (msg.url && nodeUrl && (nodeUrl !== msg.url)) { // revert change below when warning is finally removed
                 node.warn(RED._("common.errors.nooverride"));
