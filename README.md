@@ -8,7 +8,7 @@ run npm -g install node-red-contrib-http-request-ucg
 [![npm package](https://nodei.co/npm/node-red-contrib-http-request.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-red-contrib-http-request/)
 
 ## Features
-Based on the node-red core node for performing http/https requests and on the fabulous [Request](https://github.com/request/request) library which a lot of features for proxy, steaming, or TLS/SSL support.
+Based on the node-red core node for performing http/https requests and on the fabulous [Request](https://github.com/request/request) library which a lot of features for proxy, steaming, or TLS/SSL support. - Added 
 
 ## Why this module ?
 Request became a popular and proven simplified HTTP Client to make http(s) calls. It supports a lot of features/options for advanced usage. 
