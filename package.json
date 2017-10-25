@@ -1,7 +1,7 @@
 {
     "name": "node-red-contrib-http-request-ucg",
-    "version": "0.1.8",
-    "description": "A Node-RED node for performing http(s) requests that use Request library with optimized proxy support.",
+    "version": "0.1.9",
+    "description": "A Node-RED node for performing http(s) requests that use Request library with optimized proxy support. updated for timeout value exposure",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jimbarnebee/node-red-contrib-http-request-ucg.git"
@@ -27,6 +27,11 @@
             "name": "Mohamed Chekir",
             "email": "medchkir@gmail.com",
             "url": "https://github.com/medchkir"
+        },
+        {
+            "name": "Jim Barnebee",
+            "email": "jim@barnebee.com",
+            "url": "https://github.com/jimbarnebee"
         }
     ],
     "license": "MIT",
